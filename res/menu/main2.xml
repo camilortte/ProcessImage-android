@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <!-- Search, should appear as action button -->
+    
     <item
         android:id="@+id/action_open_image"
         android:icon="@drawable/ic_action_picture"
         android:showAsAction="always"
-        android:title="TITULO"
+        android:title="Open Image"
         />
-    <!-- Settings, should always be in the overflow -->
+    
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_save_image"
+        android:icon="@drawable/ic_action_save"
+        android:showAsAction="always"
+        android:title="Save Image"
+        />
+    
+    <item
+        android:id="@+id/action_about"
         android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        android:title="@string/action_about"/>
 
 </menu>

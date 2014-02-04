@@ -8,8 +8,8 @@ package cn.Ragnarok;
 
 public final class R {
 	public static final class drawable {
-		public static final int ic_launcher = 0x7f020001;
-		public static final int test = 0x7f02000f;
+		public static final int ic_launcher = 0x7f020002;
+		public static final int test = 0x7f020010;
 	}
 	public static final class id {
 		public static final int button_change_to_block = 0x7f07000f;

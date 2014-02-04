@@ -13,16 +13,17 @@
         android:scaleType="centerInside"
         android:scrollbars="horizontal|vertical"
         android:contentDescription="@string/Button_reset"
-        android:src="@drawable/lena" />
+        android:src="@drawable/lena" 
+        android:background="@android:color/black"/>
 
    <fragment 
         android:id="@+id/eso"
         android:name="com.camilortte.convolve2d.fragmento1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="bottom"
-        android:layout_weight="0.3"        
-        />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+        <!-- android:layout_weight="0.3"-->        
+       
     
     
 

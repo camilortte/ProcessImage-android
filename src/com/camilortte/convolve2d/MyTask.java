@@ -38,11 +38,9 @@ public class MyTask extends AsyncTask<Void, Boolean, Bitmap> {
 	}
 
 	public void onPreExecute() {
-		super.onPreExecute();
-		Log.i("COSA","ENTAR EN EL TASK");		
-	    dialog = new ProgressDialog(ma);
-	    Log.d("AsyncTask!", "Showing dialog now!"); //shown in logcat
-	    dialog.setMessage("Retreiving all currently airing anime. Please wait.");
+		super.onPreExecute();	
+	    dialog = new ProgressDialog(ma);	    
+	    dialog.setMessage("Please wait...");
 	    dialog.setCancelable(false);
 	    dialog.show();  
 	}
@@ -71,7 +69,7 @@ public class MyTask extends AsyncTask<Void, Boolean, Bitmap> {
 			ma.setMainImage(unused);			
 			break;
 		case LOAD_IMAGES_FROM_SD:
-			loadFromSD();
+			ma.updateGUI();
 			break;
 		default:
 			break;
