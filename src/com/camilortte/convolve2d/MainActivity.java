@@ -20,6 +20,9 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager.LayoutParams;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,6 +31,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import cn.Ragnarok.BitmapFilter;
 
@@ -180,9 +184,18 @@ public class MainActivity extends FragmentActivity {
 		case R.id.action_about:
 			//Intent i2 = new Intent(this, MainActivity22.class);
 			//startActivity(i2);
+			final SpannableString s = new SpannableString("https://twitter.com/camilortte");
+
+		    final TextView tx1 = new TextView(this);
+		    tx1.setText(getString(R.string.about_this) );
+		    tx1.setAutoLinkMask(RESULT_OK);
+		    tx1.setMovementMethod(LinkMovementMethod.getInstance());
+
+		    Linkify.addLinks(s, Linkify.WEB_URLS);
 			Builder dialog = new AlertDialog.Builder(MainActivity.this);
 			dialog.setTitle(MainActivity.this.getResources().getString(R.string.app_name));  
-			dialog.setMessage(getString(R.string.about_this));  
+			//dialog.setMessage(getString(R.string.about_this));
+			dialog.setView(tx1);
 			dialog.setIcon(R.drawable.ic_launcher);  
 			dialog.setPositiveButton("OK", null);
 			dialog.show();  
