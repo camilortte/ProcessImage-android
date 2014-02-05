@@ -4,21 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    
-
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal" 
-            android:background="@android:color/black">
-      
+            android:background="@android:color/black">      
                      
         </LinearLayout>
         

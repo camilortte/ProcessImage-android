@@ -20,7 +20,6 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager.LayoutParams;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -49,7 +48,6 @@ public class MainActivity extends FragmentActivity {
 	private Cursor cursor;
 	private static final int GET_IMAGE_SD_REQUEST=1;
 	private static final int NUMBERS_OF_FILTERS=18;
-	private static final int WIDTH_OF_IMAGES_FILTERS=250;
 	private final String path = Environment.getExternalStorageDirectory().toString()+"/"+
 							android.os.Environment.DIRECTORY_DCIM+"/Convolve2D";
 	
@@ -102,7 +100,6 @@ public class MainActivity extends FragmentActivity {
 		public void onClick(View v) {			
 			final int id=v.getId();				
         	for(int i=0;i<filtersInt.length;i++){
-				 Log.i("COSA","ID del evento="+id+" ID del objeto"+imgFilters[i].getId());
 				 if(imgFilters[i].getId()==id){								 
 					 //myBitmap=BitmapFilter.changeStyle(originalImageSacled,filtersInt[i]);
 					 //imgView.setImageBitmap(myBitmap);
@@ -152,7 +149,6 @@ public class MainActivity extends FragmentActivity {
 	//load all Images filters and put in a mainView
 	public void loadFilters() {		
 		for (int i = 0; i < imgFilters.length; i++) {
-			Log.i("COSA", "EN LA ITERANCON" + i);
 			imgFilters[i] = new ImageView(this);
 			imgFilters[i].setImageBitmap(BitmapFilter.changeStyle(bmp, filtersInt[i]));
 			imgFilters[i].setScaleType(ScaleType.FIT_START);
@@ -166,7 +162,7 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main2, menu);
+		inflater.inflate(R.menu.main, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -186,15 +182,13 @@ public class MainActivity extends FragmentActivity {
 			//startActivity(i2);
 			Builder dialog = new AlertDialog.Builder(MainActivity.this);
 			dialog.setTitle(MainActivity.this.getResources().getString(R.string.app_name));  
-			dialog.setMessage("This applications was created by Camilo Ramírez @camilortte" +
-					" with help to ragnrok;\nsee the code on github https://github.com/camilortte/ProcessImage-android");  
+			dialog.setMessage(getString(R.string.about_this));  
 			dialog.setIcon(R.drawable.ic_launcher);  
 			dialog.setPositiveButton("OK", null);
 			dialog.show();  
 			return true;
 		case R.id.action_save_image:
 			saveImageAs();
-			Log.i("COSA","SAVEIMAGEAS");
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -265,7 +259,7 @@ public class MainActivity extends FragmentActivity {
 		     	           myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, out);
 		     	           out.flush();
 		     	           out.close();
-		     	           Toast.makeText(MainActivity.this, "The image was save on "+path, 5000).show();
+		     	           Toast.makeText(MainActivity.this, getString(R.string.save_image_success_toast)+path, 5000).show();
 
 		     	    } catch (Exception e) {
 		     	           e.printStackTrace();
@@ -273,14 +267,14 @@ public class MainActivity extends FragmentActivity {
 		            break;
 
 		        case DialogInterface.BUTTON_NEGATIVE:
-		        	Toast.makeText(MainActivity.this, "Cancel", 4000).show();
+		        	Toast.makeText(MainActivity.this, getString(R.string.save_image_cancel_toast), 4000).show();
 		            break;
 		        }
 		    }
 		};
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+		builder.setMessage(R.string.sure_save_image).setPositiveButton("Yes", dialogClickListener)
 		    .setNegativeButton("No", dialogClickListener).show();
 		
 	   

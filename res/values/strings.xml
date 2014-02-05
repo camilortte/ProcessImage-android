@@ -8,6 +8,26 @@
     <string name="Button_reset">Reset</string>
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
-    <string name="title_activity_main_activity22">MainActivity22</string>
+    <string name="title_activity_main_activity22">MainActivity22</string>    
+    <string name="about_this">This applications was created by Camilo Ramírez 
+        @camilortte with help to ragnrok;\nsee the code on 
+        github https://github.com/camilortte/ProcessImage-android
+    </string>
+    <string name="save_image_success_toast">The image was save on </string>
+    <string name="save_image_cancel_toast">Cancel</string>
+    <string name="sure_save_image">Are you sure?</string>
+    <string name="wait">Please wait</string>
+    <string name="wait">Please wait</string>
+    <string name="open_image">Open Image</string>
+    <string name="save_image">Save Image</string>
+    <string name="description">
+    	This is a small aplication for applicate filters to images. 
+    	The applications contains the library of ragnraok 
+    	(https://github.com/ragnraok/android-image-filter)    
+    </string>
+    
+    
+    
 
 </resources>
+ 

@@ -1,18 +1,14 @@
 package com.camilortte.convolve2d;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.ImageView;
 import cn.Ragnarok.BitmapFilter;
 
 public class MyTask extends AsyncTask<Void, Boolean, Bitmap> {
 
 	private ProgressDialog dialog;
 	private MainActivity ma;
-	private Context co;
 	private int style;
 	private  Bitmap originalImageScaled;
 	public static final int LOAD_FILTERS=0;
@@ -21,7 +17,6 @@ public class MyTask extends AsyncTask<Void, Boolean, Bitmap> {
 	
 	public MyTask(MainActivity ma) {
 		this.ma = ma;
-		this.co = ma;
 		dialog = new ProgressDialog(ma);		
 	}	
 	
@@ -40,7 +35,7 @@ public class MyTask extends AsyncTask<Void, Boolean, Bitmap> {
 	public void onPreExecute() {
 		super.onPreExecute();	
 	    dialog = new ProgressDialog(ma);	    
-	    dialog.setMessage("Please wait...");
+	    dialog.setMessage(ma.getString(R.string.wait)+"...");
 	    dialog.setCancelable(false);
 	    dialog.show();  
 	}

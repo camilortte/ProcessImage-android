@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.camilortte.convolve2d"
-    android:versionCode="2"
-    android:versionName="0.6" >
+    android:versionCode="3"
+    android:versionName="0.7">
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -15,7 +15,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppBaseTheme" >
+        android:theme="@style/AppBaseTheme" android:logo="@drawable/ic_launcher" android:permission="android.permission.WRITE_EXTERNAL_STORAGE" android:debuggable="false" android:description="@string/description" android:testOnly="false" android:allowClearUserData="false">
         <activity
             android:name="com.camilortte.convolve2d.MainActivity"
             android:label="@string/app_name"

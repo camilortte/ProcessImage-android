@@ -131,9 +131,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int test=0x7f020010;
     }
     public static final class id {
-        public static final int action_about=0x7f070017;
-        public static final int action_open_image=0x7f070018;
-        public static final int action_save_image=0x7f070019;
+        public static final int action_about=0x7f070018;
+        public static final int action_open_image=0x7f070016;
+        public static final int action_save_image=0x7f070017;
         public static final int button_change_to_block=0x7f07000f;
         public static final int button_change_to_gray=0x7f070007;
         public static final int button_change_to_hdr=0x7f070014;
@@ -158,30 +158,33 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  Just adding these so I wont have to remove a lot of code from NumberPicker.java. 
          */
         public static final int np__increment=0x7f070000;
-        public static final int np__numberpicker_input=0x7f070016;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_main_activity22=0x7f030001;
-        public static final int fragemnt=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int number_picker_with_selector_wheel=0x7f030004;
+        public static final int fragemnt=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f090000;
-        public static final int main2=0x7f090001;
-        public static final int main_activity22=0x7f090002;
     }
     public static final class string {
         public static final int Button_reset=0x7f040005;
         public static final int TextInputHint=0x7f040004;
+        public static final int about_this=0x7f040009;
         public static final int action_about=0x7f040002;
         public static final int app_name=0x7f040001;
+        public static final int description=0x7f040010;
         public static final int hello=0x7f040000;
         public static final int hello_world=0x7f040003;
+        public static final int open_image=0x7f04000e;
+        public static final int save_image=0x7f04000f;
+        public static final int save_image_cancel_toast=0x7f04000b;
+        public static final int save_image_success_toast=0x7f04000a;
+        public static final int sure_save_image=0x7f04000c;
         public static final int title_activity_main_activity22=0x7f040008;
         public static final int title_item_detail=0x7f040007;
         public static final int title_item_list=0x7f040006;
+        public static final int wait=0x7f04000d;
     }
     public static final class style {
         /** 
