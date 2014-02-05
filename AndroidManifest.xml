@@ -15,7 +15,11 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppBaseTheme" android:logo="@drawable/ic_launcher" android:permission="android.permission.WRITE_EXTERNAL_STORAGE" android:debuggable="false" android:description="@string/description" android:testOnly="false" android:allowClearUserData="false">
+        android:theme="@style/AppBaseTheme" 
+        android:debuggable="false" 
+        android:description="@string/description" 
+        android:testOnly="false" 
+        android:allowClearUserData="true">
         <activity
             android:name="com.camilortte.convolve2d.MainActivity"
             android:label="@string/app_name"
